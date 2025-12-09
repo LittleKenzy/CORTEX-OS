@@ -1,0 +1,399 @@
+
+
+> api@0.1.0 build /home/littlekenzy/Documents/coding/cortex-os/packages/api
+> tsc
+
+[96msrc/routers/decisions.router.ts[0m:[93m2[0m:[93m44[0m - [91merror[0m[90m TS2307: [0mCannot find module '../trpc' or its corresponding type declarations.
+
+[7m2[0m import { router, protectedProcedure } from '../trpc';
+[7m [0m [91m                                           ~~~~~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m30[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m30[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m30[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m30[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m31[0m:[93m51[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m31[0m       const service = new DecisionService(ctx.db, ctx.userId);
+[7m  [0m [91m                                                  ~~~~~~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m41[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m41[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m41[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m41[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m42[0m:[93m51[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m42[0m       const service = new DecisionService(ctx.db, ctx.userId);
+[7m  [0m [91m                                                  ~~~~~~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m43[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'updateOutcome' does not exist on type 'DecisionService'.
+
+[7m43[0m       return service.updateOutcome(input.id, input.actualOutcome);
+[7m  [0m [91m                     ~~~~~~~~~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m49[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m49[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m49[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m49[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m60[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m60[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m60[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m60[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m73[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m73[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m73[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m73[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m74[0m:[93m51[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m74[0m       const service = new DecisionService(ctx.db, ctx.userId);
+[7m  [0m [91m                                                  ~~~~~~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m75[0m:[93m22[0m - [91merror[0m[90m TS2551: [0mProperty 'listDecisions' does not exist on type 'DecisionService'. Did you mean 'getDecisions'?
+
+[7m75[0m       return service.listDecisions(input);
+[7m  [0m [91m                     ~~~~~~~~~~~~~[0m
+
+  [96msrc/services/decisions/decision.service.ts[0m:[93m26[0m:[93m9[0m
+    [7m26[0m   async getDecisions() {
+    [7m  [0m [96m        ~~~~~~~~~~~~[0m
+    'getDecisions' is declared here.
+
+[96msrc/routers/decisions.router.ts[0m:[93m81[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m81[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m81[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m81[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m82[0m:[93m51[0m - [91merror[0m[90m TS2554: [0mExpected 1 arguments, but got 2.
+
+[7m82[0m       const service = new DecisionService(ctx.db, ctx.userId);
+[7m  [0m [91m                                                  ~~~~~~~~~~[0m
+
+[96msrc/routers/decisions.router.ts[0m:[93m83[0m:[93m22[0m - [91merror[0m[90m TS2339: [0mProperty 'getDecisionWithAnalysis' does not exist on type 'DecisionService'.
+
+[7m83[0m       return service.getDecisionWithAnalysis(input.id);
+[7m  [0m [91m                     ~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m3[0m:[93m44[0m - [91merror[0m[90m TS2307: [0mCannot find module '../trpc' or its corresponding type declarations.
+
+[7m3[0m import { router, protectedProcedure } from '../trpc';
+[7m [0m [91m                                           ~~~~~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m4[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '../services/habits/habit.service' or its corresponding type declarations.
+
+[7m4[0m import { HabitService } from '../services/habits/habit.service';
+[7m [0m [91m                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m19[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m19[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m19[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m19[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m33[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m33[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m33[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m33[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m44[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m44[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m44[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m44[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m56[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m56[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m56[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m56[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m64[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m64[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m64[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m64[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m74[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m74[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m74[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m74[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m82[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m82[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/habits.router.ts[0m:[93m82[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m82[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m2[0m:[93m44[0m - [91merror[0m[90m TS2307: [0mCannot find module '../trpc' or its corresponding type declarations.
+
+[7m2[0m import { router, protectedProcedure } from '../trpc';
+[7m [0m [91m                                           ~~~~~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m3[0m:[93m34[0m - [91merror[0m[90m TS2307: [0mCannot find module '../services/knowledge/knowledge.service' or its corresponding type declarations.
+
+[7m3[0m import { KnowledgeService } from '../services/knowledge/knowledge.service';
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m4[0m:[93m30[0m - [91merror[0m[90m TS2307: [0mCannot find module '../services/knowledge/graph.service' or its corresponding type declarations.
+
+[7m4[0m import { GraphService } from '../services/knowledge/graph.service';
+[7m [0m [91m                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m15[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m15[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m15[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m15[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m29[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m29[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m29[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m29[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m37[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m37[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m37[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m37[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m51[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m51[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m51[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m51[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m62[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m62[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m62[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m62[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m70[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m70[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/knowledge.router.ts[0m:[93m70[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m70[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m3[0m:[93m44[0m - [91merror[0m[90m TS2307: [0mCannot find module '../trpc' or its corresponding type declarations.
+
+[7m3[0m import { router, protectedProcedure } from '../trpc';
+[7m [0m [91m                                           ~~~~~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m4[0m:[93m29[0m - [91merror[0m[90m TS2307: [0mCannot find module '../services/tasks/task.service' or its corresponding type declarations.
+
+[7m4[0m import { TaskService } from '../services/tasks/task.service';
+[7m [0m [91m                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m6[0m:[93m34[0m - [91merror[0m[90m TS2307: [0mCannot find module '../services/tasks/scheduler.service' or its corresponding type declarations.
+
+[7m6[0m import { SchedulerService } from '../services/tasks/scheduler.service';
+[7m [0m [91m                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m21[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m21[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m21[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m21[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m37[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m37[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m37[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m37[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m48[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m48[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m48[0m:[93m26[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m48[0m     .query(async ({ ctx, input }) => {
+[7m  [0m [91m                         ~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m55[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m55[0m     .mutation(async ({ ctx }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m62[0m:[93m21[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m62[0m     .query(async ({ ctx }) => {
+[7m  [0m [91m                    ~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m74[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m74[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m74[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m74[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m82[0m:[93m24[0m - [91merror[0m[90m TS7031: [0mBinding element 'ctx' implicitly has an 'any' type.
+
+[7m82[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                       ~~~[0m
+
+[96msrc/routers/tasks.router.ts[0m:[93m82[0m:[93m29[0m - [91merror[0m[90m TS7031: [0mBinding element 'input' implicitly has an 'any' type.
+
+[7m82[0m     .mutation(async ({ ctx, input }) => {
+[7m  [0m [91m                            ~~~~~[0m
+
+[96msrc/services/decisions/bias-analyzer.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'PrismaClient'.
+
+[7m1[0m import { PrismaClient } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~~[0m
+
+[96msrc/services/decisions/bias-analyzer.ts[0m:[93m2[0m:[93m51[0m - [91merror[0m[90m TS2307: [0mCannot find module '@cortex/shared/types' or its corresponding type declarations.
+
+[7m2[0m import { CognitiveBias, BiasAnalysisReport } from '@cortex/shared/types';
+[7m [0m [91m                                                  ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/services/decisions/decision.service.ts[0m:[93m2[0m:[93m51[0m - [91merror[0m[90m TS2307: [0mCannot find module '@cortex/shared/types' or its corresponding type declarations.
+
+[7m2[0m import { CognitiveBias, BiasAnalysisReport } from "@cortex/shared/types";
+[7m [0m [91m                                                  ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/services/habits/pattern-detector.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'PrismaClient'.
+
+[7m1[0m import { PrismaClient } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~~[0m
+
+[96msrc/services/habits/pattern-detector.ts[0m:[93m2[0m:[93m32[0m - [91merror[0m[90m TS2307: [0mCannot find module '@cortex/shared/types' or its corresponding type declarations.
+
+[7m2[0m import { FailurePattern } from '@cortex/shared/types';
+[7m [0m [91m                               ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/services/habits/streak-calculator.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'PrismaClient'.
+
+[7m1[0m import { PrismaClient } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~~[0m
+
+[96msrc/services/habits/streak-calculator.ts[0m:[93m2[0m:[93m28[0m - [91merror[0m[90m TS2307: [0mCannot find module '@cortex/shared/types' or its corresponding type declarations.
+
+[7m2[0m import { StreakData } from '@cortex/shared/types';
+[7m [0m [91m                           ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/services/tasks/priority-scorer.ts[0m:[93m1[0m:[93m10[0m - [91merror[0m[90m TS2305: [0mModule '"@prisma/client"' has no exported member 'PrismaClient'.
+
+[7m1[0m import { PrismaClient } from '@prisma/client';
+[7m [0m [91m         ~~~~~~~~~~~~[0m
+
+[96msrc/services/tasks/priority-scorer.ts[0m:[93m2[0m:[93m48[0m - [91merror[0m[90m TS2307: [0mCannot find module '@cortex/shared/types' or its corresponding type declarations.
+
+[7m2[0m import { PriorityScore, PriorityFactors } from '@cortex/shared/types';
+[7m [0m [91m                                               ~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+Found 75 errors in 9 files.
+
+Errors  Files
+    20  src/routers/decisions.router.ts[90m:2[0m
+    16  src/routers/habits.router.ts[90m:3[0m
+    15  src/routers/knowledge.router.ts[90m:2[0m
+    15  src/routers/tasks.router.ts[90m:3[0m
+     2  src/services/decisions/bias-analyzer.ts[90m:1[0m
+     1  src/services/decisions/decision.service.ts[90m:2[0m
+     2  src/services/habits/pattern-detector.ts[90m:1[0m
+     2  src/services/habits/streak-calculator.ts[90m:1[0m
+     2  src/services/tasks/priority-scorer.ts[90m:1[0m
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 2.[39m

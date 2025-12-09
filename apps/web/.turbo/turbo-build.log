@@ -1,0 +1,9 @@
+
+
+> web@0.1.0 build /home/littlekenzy/Documents/coding/cortex-os/apps/web
+> next build
+
+   [1m[38;2;173;127;168m▲ Next.js 16.0.8[39m[22m (Turbopack)
+
+ [37m[1m [22m[39m Creating an optimized production build ...
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 130.[39m

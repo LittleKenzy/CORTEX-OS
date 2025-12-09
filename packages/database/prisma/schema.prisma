@@ -1,0 +1,116 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./cortex.db"
+}
+
+/* --------------------
+   USER
+-------------------- */
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String?
+  name      String?
+  createdAt DateTime @default(now())
+
+  notes      KnowledgeNote[]
+  tasks      Task[]
+  habits     Habit[]
+  decisions  Decision[]
+}
+
+/* --------------------
+   KNOWLEDGE VAULT
+-------------------- */
+model KnowledgeNote {
+  id        String    @id @default(cuid())
+  userId    String
+  title     String
+  content   String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  tags       Tag[]             @relation("NoteTags")
+  backlinks  Backlink[]        @relation("NoteBacklinks_source")
+  referenced Backlink[]        @relation("NoteBacklinks_target")
+
+  User User @relation(fields: [userId], references: [id])
+}
+
+model Tag {
+  id       String           @id @default(cuid())
+  name     String
+  notes    KnowledgeNote[]  @relation("NoteTags")
+}
+
+model Backlink {
+  id        String @id @default(cuid())
+  sourceId  String
+  targetId  String
+
+  source KnowledgeNote @relation("NoteBacklinks_source", fields: [sourceId], references: [id])
+  target KnowledgeNote @relation("NoteBacklinks_target", fields: [targetId], references: [id])
+}
+
+/* --------------------
+   TASK ENGINE
+-------------------- */
+model Task {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  description String?
+  priority    Int       @default(0)
+  deadline    DateTime?
+  parentId    String?
+  completed   Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+
+  children Task[] @relation("TaskChildren", fields: [id], references: [parentId])
+  parent   Task?  @relation("TaskChildren", fields: [parentId], references: [id])
+
+  User User @relation(fields: [userId], references: [id])
+}
+
+/* --------------------
+   HABIT MATRIX
+-------------------- */
+model Habit {
+  id          String       @id @default(cuid())
+  userId      String
+  name        String
+  createdAt   DateTime     @default(now())
+
+  entries HabitEntry[]
+
+  User User @relation(fields: [userId], references: [id])
+}
+
+model HabitEntry {
+  id        String   @id @default(cuid())
+  habitId   String
+  day       DateTime
+  value     Int
+
+  Habit Habit @relation(fields: [habitId], references: [id])
+}
+
+/* --------------------
+   DECISION LOG
+-------------------- */
+model Decision {
+  id          String   @id @default(cuid())
+  userId      String
+  title       String
+  context     String
+  options     String
+  chosen      String
+  reviewDate  DateTime?
+  createdAt   DateTime @default(now())
+
+  User User @relation(fields: [userId], references: [id])
+}
